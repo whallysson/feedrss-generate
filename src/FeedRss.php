@@ -19,7 +19,7 @@ class FeedRss
     /** @var DOMDocument */
     protected $xml;
 
-    /** @var DOMDocument */
+    /** @var */
     protected $channel;
 
     /** @var string */

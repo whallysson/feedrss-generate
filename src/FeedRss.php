@@ -116,9 +116,7 @@ class FeedRss
             return;
         }
 
-        if (is_array($data)) {
-            $data = json_decode(json_encode($data));
-        }
+        $data = json_decode(json_encode($data));
 
         // Items
         foreach ($data as $item) {

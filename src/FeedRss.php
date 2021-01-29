@@ -16,7 +16,7 @@ class FeedRss
     /** @var DOMElement|false */
     protected $rss;
 
-    /** @var DOMDocument */
+    /** @var DOMDocument|bool */
     protected $xml;
 
     /** @var */
@@ -42,6 +42,7 @@ class FeedRss
     public function __construct(?bool $facebookAds = false, ?bool $googleMerchant = false)
     {
         $this->xml = new DOMDocument('1.0', 'utf-8');
+        $this->xml->formatOutput = true;
 
         //Rss
         $this->rss = $this->xml->createElement('rss');
@@ -178,7 +179,6 @@ class FeedRss
         }
 
         $this->xml->appendChild($this->rss);
-        $this->xml->formatOutput = true;
 
         header('Content-type: text-xml');
         echo $this->xml->saveXML();

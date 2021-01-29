@@ -13,10 +13,10 @@ use DOMElement;
  */
 class FeedRss
 {
-    /** @var DOMElement|false */
+    /** @var */
     protected $rss;
 
-    /** @var DOMDocument|bool */
+    /** @var */
     protected $xml;
 
     /** @var */
@@ -115,7 +115,7 @@ class FeedRss
         if (empty($data)) {
             return;
         }
-        
+
         $data = json_decode(json_encode($data));
 
         // Items

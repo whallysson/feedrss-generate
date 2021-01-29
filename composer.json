@@ -1,0 +1,32 @@
+{
+    "name": "codeblog/feedrss-generate",
+    "description": "Generate an Rss Feed of the website content",
+    "keywords": [
+        "CodeBlog",
+        "Feed",
+        "Rss",
+        "FeedRss",
+        "Facebook ADS",
+        "Google Merchant"
+    ],
+    "homepage": "http://www.codeblog.com.br",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Whallysson Avelino",
+            "email": "whallyssona.dev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeBlog\\FeedRss\\": "src"
+        }
+    }
+}

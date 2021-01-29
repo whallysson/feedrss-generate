@@ -115,7 +115,7 @@ class FeedRss
         if (empty($data)) {
             return;
         }
-
+        
         $data = json_decode(json_encode($data));
 
         // Items
